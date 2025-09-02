@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography Portfolio</title>
+  <style>
+    /* --- Reset and Base Styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    /* --- Gallery Grid --- */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+    }
+
+    /* --- Lightbox Modal --- */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>My Photography Portfolio</h1>
+    <p>Capturing moments, one click at a time</p>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <a href="#img1"><img src="https://picsum.photos/id/1015/600/400" alt="Photo 1"></a>
+    <a href="#img2"><img src="https://picsum.photos/id/1016/600/400" alt="Photo 2"></a>
+    <a href="#img3"><img src="https://picsum.photos/id/1018/600/400" alt="Photo 3"></a>
+    <a href="#img4"><img src="https://picsum.photos/id/1020/600/400" alt="Photo 4"></a>
+    <a href="#img5"><img src="https://picsum.photos/id/1024/600/400" alt="Photo 5"></a>
+    <a href="#img6"><img src="https://picsum.photos/id/1031/600/400" alt="Photo 6"></a>
+  </section>
+
+  <!-- Lightbox Modals -->
+  <div id="img1" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="https://picsum.photos/id/1015/1200/800" alt="Photo 1">
+  </div>
+  <div id="img2" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="https://picsum.photos/id/1016/1200/800" alt="Photo 2">
+  </div>
+  <div id="img3" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="https://picsum.photos/id/1018/1200/800" alt="Photo 3">
+  </div>
+  <div id="img4" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="https://picsum.photos/id/1020/1200/800" alt="Photo 4">
+  </div>
+  <div id="img5" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="https://picsum.photos/id/1024/1200/800" alt="Photo 5">
+  </div>
+  <div id="img6" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="https://picsum.photos/id/1031/1200/800" alt="Photo 6">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Photography Portfolio | Designed by Me</p>
+  </footer>
+
+</body>
+</html>
